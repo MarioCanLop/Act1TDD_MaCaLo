@@ -1,40 +1,34 @@
-﻿namespace TestActividadTDDAppMaCaLo
+﻿using PracticaTDD_MaCaLo;
+
+namespace TestActividadTDDAppMaCaLo
 {
     [TestClass]
     public sealed class FuncionesTest
     {
         [TestMethod]
-        public long CalcularFactorial(int n)
+        public void CalcularFactorial_NumeroNegativo()
         {
-            long resultado = 1;
+         
+            Funciones f = new Funciones();
+            long resultado = f.CalcularFactorial(-5);
+            Assert.AreEqual(-1, resultado);
 
-            if (n < 0)
-            {
+        }
 
-                resultado = -1;
+        [TestMethod]
+        public void CalcularFactorial_Cero()
+        {
+            Funciones f = new Funciones();
+            long resultado = f.CalcularFactorial(0);
+            Assert.AreEqual(1, resultado);
+        }
 
-            }
-            else if (n == 0)
-            {
-
-                resultado = 1;
-
-            }
-            else
-            {
-
-
-
-                for (int i = 1; i <= n; i++)
-                {
-                    resultado *= i;
-                }
-
-            }
-
-            return resultado;
-
-
+        [TestMethod]
+        public void CalcularFactorial_NumeroPositivo()
+        {
+            Funciones f = new Funciones();
+            long resultado = f.CalcularFactorial(5);
+            Assert.AreEqual(120, resultado);
         }
     }
 }
