@@ -64,7 +64,7 @@ namespace TestActividadTDDAppMaCaLo
         }
 
         [TestMethod]
-        public void EsContrasenyaValida_()
+        public void EsContrasenyaValida_Valida()
         {
             Funciones f = new Funciones();
             bool resultado = f.EsContrasenyaValida("asdftyi#");

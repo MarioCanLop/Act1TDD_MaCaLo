@@ -24,7 +24,15 @@ namespace PracticaTDD_MaCaLo
 
         public bool EsContrasenyaValida(string contrasenya)
         {
-            throw new NotImplementedException();
+            if (contrasenya is null || contrasenya.Length == 0 || (contrasenya.Length < 8 || !contrasenya.Contains("#")) )
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
 
 
