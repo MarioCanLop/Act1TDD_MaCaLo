@@ -8,32 +8,18 @@ namespace PracticaTDD_MaCaLo
 
         public long CalcularFactorial(int n)
         {
-            long resultado = 1;
-
-
             if (n < 0)
             {
-
-                resultado = -1;
-
+                return -1;
             }
-            else if (n == 0)
+
+            long resultado = 1;
+            for (int i = 1; i <= n; i++)
             {
-
-
-                resultado = 1;
-
+                resultado *= i;
             }
-            else
-            {
 
-                for (int i = 1; i <= n; i++)
-                {
-
-                    resultado *= i;
-                }
-            }
-                return resultado;
+            return resultado;
         }
 
 
