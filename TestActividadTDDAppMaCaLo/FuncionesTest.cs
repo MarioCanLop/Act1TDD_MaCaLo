@@ -30,5 +30,47 @@ namespace TestActividadTDDAppMaCaLo
             long resultado = f.CalcularFactorial(5);
             Assert.AreEqual(120, resultado);
         }
+
+        [TestMethod]
+        public void EsContrasenyaValida_Null()
+        {
+            Funciones f = new Funciones();
+            bool resultado = f.EsContrasenyaValida(null);
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void EsContrasenyaValida_Vacia()
+        {
+            Funciones f = new Funciones();
+            bool resultado = f.EsContrasenyaValida("");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void EsContrasenyaValida_LogintudMenos8()
+        {
+            Funciones f = new Funciones();
+            bool resultado = f.EsContrasenyaValida("asdfty#");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void EsContrasenyaValida_SinCaracter()
+        {
+            Funciones f = new Funciones();
+            bool resultado = f.EsContrasenyaValida("asdftyui");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void EsContrasenyaValida_()
+        {
+            Funciones f = new Funciones();
+            bool resultado = f.EsContrasenyaValida("asdftyi#");
+            Assert.IsTrue(resultado);
+        }
+
+
     }
 }

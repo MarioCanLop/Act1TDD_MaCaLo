@@ -22,6 +22,11 @@ namespace PracticaTDD_MaCaLo
             return resultado;
         }
 
+        public bool EsContrasenyaValida(string contrasenya)
+        {
+            throw new NotImplementedException();
+        }
+
 
     }
 }
