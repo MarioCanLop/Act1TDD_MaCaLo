@@ -1,12 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PracticaTDD_MaCaLo;
 
 namespace PracticaTDD_MaCaLo
 {
-    internal class Funciones
+    public class Funciones
     {
+
+        public long CalcularFactorial(int n)
+        {
+            if (n < 0)
+            {
+                return -1;
+            }
+
+            long resultado = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                resultado *= i;
+            }
+
+            return resultado;
+        }
+
+        public bool EsContrasenyaValida(string contrasenya)
+        {
+            if (contrasenya is null || contrasenya.Length == 0 || (contrasenya.Length < 8 || !contrasenya.Contains("#")) )
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
+
     }
 }

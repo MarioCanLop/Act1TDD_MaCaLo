@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaTDD_MaCaLo", "PracticaTDD_MaCaLo\PracticaTDD_MaCaLo.csproj", "{111ECF27-2C9D-46A0-AAE5-510B4E40CC83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestActividadTDDAppMaCaLo", "TestActividadTDDAppMaCaLo\TestActividadTDDAppMaCaLo.csproj", "{99678933-DDCB-4CCD-8E99-39BA61425A2C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{111ECF27-2C9D-46A0-AAE5-510B4E40CC83} = {111ECF27-2C9D-46A0-AAE5-510B4E40CC83}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
